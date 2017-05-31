@@ -4,10 +4,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-	<script src="semantic/semantic.min.js"></script>
-  
+
+  <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="semantic/semantic.min.js"></script>
+
   <title>Homepage - Semantic</title>
 
   <style type="text/css">
@@ -19,7 +20,7 @@
 
     .masthead.segment
     {
-      min-height: 700px;
+      min-height: 570px;
       padding: 1em 0;
     }
     .masthead .logo.item img
@@ -107,7 +108,7 @@
       }
       .masthead.segment
       {
-        min-height: 350px;
+        min-height: 500px;
       }
       .masthead h1.ui.header
       {
@@ -124,13 +125,8 @@
     }
 
     .parallax {
-      /* The image used */
       background-image: url("images/testimg2.jpg");
-
-      /* Set a specific height */
       min-height: 500px;
-
-      /* Create the parallax scrolling effect */
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -145,29 +141,29 @@
   <script src="semantic/components/sidebar.js"></script>
   <script src="semantic/components/transition.js"></script>
   <script>
-  $(document)
-    .ready(function() {
+      $(document)
+          .ready(function() {
 
-      // fix menu when passed
-      $('.masthead')
-        .visibility({
-          once: false,
-          onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
-          },
-          onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
-          }
-        })
+              // fix menu when passed
+              $('.masthead')
+                  .visibility({
+                      once: false,
+                      onBottomPassed: function() {
+                          $('.fixed.menu').transition('fade in');
+                      },
+                      onBottomPassedReverse: function() {
+                          $('.fixed.menu').transition('fade out');
+                      }
+                  })
+              ;
+
+              // create sidebar and attach to menu open
+              $('.ui.sidebar')
+                  .sidebar('attach events', '.toc.item')
+              ;
+
+          })
       ;
-
-      // create sidebar and attach to menu open
-      $('.ui.sidebar')
-        .sidebar('attach events', '.toc.item')
-      ;
-
-    })
-  ;
   </script>
 </head>
 
@@ -237,8 +233,10 @@
 
 
 <div class="pusher">
-  <div class="ui inverted vertical masthead center aligned segment">
 
+
+  <!-- header and logo !-->
+  <div class="ui inverted vertical masthead center aligned segment" style="height: 500px;">
     <div class="ui container">
       <div class="ui large secondary inverted pointing menu">
         <a class="toc item">
@@ -254,18 +252,14 @@
         </div>
       </div>
     </div>
-
-    <div class="parallax"></div>
-
-    <div class="ui text container">
-      <h1 class="ui inverted header">
-        Imagine-a-Company
-      </h1>
-      <h2>Do whatever you want when you want to.</h2>
-      <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+    <div class="parallax">
+      <div id="logomain">
+        <iframe width="100%" height="100%" frameborder="0" src="logomainpage.html"></iframe>
+      </div>
     </div>
-
   </div>
+
+
 
   <div class="ui vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
