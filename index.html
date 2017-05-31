@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
-  <!--  <script type="text/javascript" src="cssrefresh.js"></script>  <!-- utorefresh do usuniecia !-->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-	<script src="semantic/dist/semantic.min.js"></script>
+	<script src="semantic/semantic.min.js"></script>
   
   <title>Homepage - Semantic</title>
 
@@ -124,6 +123,14 @@
       }
     }
 
+    .parallax {
+      background-image: url("images/testimg2.jpg");
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
 
   </style>
@@ -158,18 +165,21 @@
   ;
   </script>
 </head>
+
 <body class="pushable">
 
-<!-- Following Menu -->
+
+
+<!-- top header -->
 <div class="ui large top fixed menu transition hidden">
   <div class="ui container">
-    <a class="active item">Główna</a>
-    <a class="item">Filmy</a>
-    <a class="item">Seriale</a>
-    <a class="item">Careers</a>
+    <a class="active item">Home</a>
+    <a class="item">Movies</a>
+    <a class="item">Series</a>
+    <a class="item">BLANK</a>
     <div class="right menu">
       <div class="item">
-        <a class="ui button">Log in</a>
+        <a class="ui button" id="loginModal">Log in</a>
       </div>
       <div class="item">
         <a class="ui primary button">Sign Up</a>
@@ -178,8 +188,49 @@
   </div>
 </div>
 
+<script>
+    $(document).ready(function(){
+        $('#loginModal').click(function(){
+            $('#modaldiv').modal({blurring: true}).modal('show');
+        });
+        $('#loginModal2').click(function(){
+            $('#modaldiv').modal({blurring: true}).modal('show');
+        });
+    });
+</script>
+
+
+<!-- Login panel !-->
+<div id="modaldiv" class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Profile Picture
+  </div>
+  <div class="content">
+    <div class="ui medium image">
+      <img src="/images/avatar/large/chris.jpg">
+    </div>
+    <div class="description">
+      <div class="ui header">We've auto-chosen a profile image for you.</div>
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>Is it okay to use this photo?</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+
 
 <!-- Page Contents -->
+
+
 <div class="pusher">
   <div class="ui inverted vertical masthead center aligned segment">
 
@@ -188,16 +239,18 @@
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        <a class="active item">Główna</a>
-        <a class="item">Filmy</a>
-        <a class="item">Seriale</a>
-        <a class="item">Careers</a>
+        <a class="active item">Home</a>
+        <a class="item">Movies</a>
+        <a class="item">Series</a>
+        <a class="item">BLANK</a>
         <div class="right item">
-          <a class="ui inverted button">Log in</a>
+          <a class="ui inverted button" id="loginModal2">Login</a>
           <a class="ui inverted button">Sign Up</a>
         </div>
       </div>
     </div>
+
+    <div class="parallax"></div>
 
     <div class="ui text container">
       <h1 class="ui inverted header">
