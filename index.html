@@ -133,6 +133,17 @@
       background-size: cover;
     }
 
+    .modal {
+      position: fixed;
+      z-index: 1;
+      width: 100px; /* Full width */
+      height: 400px; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      padding-top: 60px;
+      padding-left: 20px;
+    }
 
   </style>
 
@@ -201,31 +212,42 @@
 </script>
 
 
-<!-- Login panel !-->
+<!-- Login panel todo fix !-->
 <div id="modaldiv" class="ui modal">
-  <i class="close icon"></i>
-  <div class="header">
-    Profile Picture
+
+  <div class="column">
+    <h2 class="ui teal image header">
+      <img src="assets/images/logo.png" class="image">
+      <div class="content">
+        Log-in to your account
+      </div>
+    </h2>
+    <form class="ui large form">
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="email" placeholder="E-mail address">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="ui fluid large teal submit button">Login</div>
+      </div>
+
+      <div class="ui error message"></div>
+
+    </form>
+
+    <div class="ui message">
+      New to us? <a href="#">Sign Up</a>
+    </div>
   </div>
-  <div class="content">
-    <div class="ui medium image">
-      <img src="/images/avatar/large/chris.jpg">
-    </div>
-    <div class="description">
-      <div class="ui header">We've auto-chosen a profile image for you.</div>
-      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
-      <p>Is it okay to use this photo?</p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui black button">
-      Nope
-    </div>
-    <div class="ui positive right labeled icon button">
-      Yep, that's me
-      <i class="checkmark icon"></i>
-    </div>
-  </div>
+
 </div>
 
 
