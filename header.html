@@ -36,7 +36,7 @@
 <script>
     $(document).ready(function($){
         $('#loginModal3').click(function(){
-            $('#modaldiv').modal('show');
+            $('#modaldiv').modal({blurring: true}).modal('show');
         });
     });
 </script>
@@ -53,7 +53,7 @@
                 <a class="ui button green" id="loginModal3">Log in</a>
             </div>
             <div class="item">
-                <a class="ui primary button">Sign Up</a>
+                <a class="ui primary button" href="signup.html">Sign Up</a>
             </div>
         </div>
     </div>

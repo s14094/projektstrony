@@ -10,11 +10,99 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="semantic/semantic.min.js"></script>
 
+    <style>
+        .headerslot{
+            margin-top: 100px;
+        }
+        .wrapper {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+    </style>
+
 </head>
 <body>
 <div id="myheader">
     <script>$('#myheader').load('header.html');</script>
 </div>
-movies
+
+<div class="wrapper">
+<form class="ui form headerslot field">
+
+    <div class="ui two column grid">
+        <div class="sixteen wide column">
+            <h1>Join Curse.y0.pl</h1>
+            <h3>Place where you can do stuff or something.</h3>
+            <div class="ui ordered steps">
+                <div class="completed step">
+                    <div class="content">
+                        <div class="title">Research</div>
+                        <div class="description">Find this website</div>
+                    </div>
+                </div>
+                <div class="active step">
+                    <div class="content">
+                        <div class="title">Account</div>
+                        <div class="description">Create account here</div>
+                    </div>
+                </div>
+                <div class="disabled step">
+                    <div class="content">
+                        <div class="title">Have fun</div>
+                        <div class="description">Discover features of this place</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="four column row">
+            <div class="ten wide column" style="width: 500px;">
+                <div class="field input">
+                    <label>Username</label>
+                    <input type="text" name="regUsername">
+                    <small>This will be your username!</small>
+                </div>
+                <div class="field">
+                    <label>Email Address</label>
+                    <input type="email" name="regEmail">
+                    <small>For spam purposes.</small>
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input type="password" name="regPassword">
+                    <small>Use any password you want.</small>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" tabindex="0">
+                        <label>I agree to the <a href="https://realfakestudios.com/terms-conditions/">Terms and Conditions</a></label>
+                    </div>
+                </div>
+                <button class="ui inverted green button" type="submit">Create an account</button>
+            </div>
+
+            <div class="four wide column right floated">
+                <div class="ui segments">
+                    <div class="ui segment">
+                        You’ll love this website
+                    </div>
+                    <div class="ui segment">
+                        <div>You may ask</div>
+                        <div>why?</div>
+                        <div class="ui bulleted list">
+                            <div class="item">Limited content</div>
+                            <div class="item">Cool frontend</div>
+                            <div class="item">And why not</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+
+
 </body>
 </html>
