@@ -14,6 +14,20 @@
         .headerslot{
             margin-top: 100px;
         }
+
+        .collapse{
+            cursor: pointer;
+            display: block;
+        }
+        .collapse + input{
+            display: none; /* hide the checkboxes */
+        }
+        .collapse + input + div{
+            display:none;
+        }
+        .collapse + input:checked + div{
+            display:block;
+        }
     </style>
 </head>
 <body>
@@ -25,17 +39,20 @@
 
 
 <div class="headerslot">
-    list of movies
+    <div style="margin-left: calc(3% + 108px); margin-bottom: 50px;">
+        <h1>List of movies</h1>
+    </div>
 
-    <div class="ui fluid category search">
+
+    <div class="ui fluid category search" style="margin-left: calc(3% + 108px);">
         <div class="ui icon input">
-            <input class="prompt" type="text" placeholder="Search animals...">
+            <input class="prompt" type="text" placeholder="Search movies...">
             <i class="search icon"></i>
         </div>
         <div class="results"></div>
     </div>
 
-<table class="ui small celled definition padded selectable inverted table">
+<table class="ui small celled definition padded selectable inverted table" style="margin-left:3%; margin-right:3%; width: 94%;">
     <thead>
     <tr><th width="100px;" class="single line">Image</th>
         <th width="100px;">Title</th>
@@ -48,6 +65,23 @@
     <tbody>
     <tr>
         <td>
+            <div><label class="collapse" for="_1">Collapse 1</label>
+            <input id="_1" type="checkbox"><div>
+        <pre>
+            Game of thrones
+            Black mirror
+            Westworld
+            Narcos
+            Taboo
+            Wikings
+            Better call soul
+            Band of Brothers
+            Breaking Bad
+            Stranger Things
+            Legion
+            Orange in the New Black
+        </pre></div>
+            </div>
             1
         </td>
         <td class="single line">
